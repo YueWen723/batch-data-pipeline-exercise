@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS stg_products (
     title VARCHAR,
     category VARCHAR,
     price DECIMAL,
-    processed_time timestamp
+    processed_time ti mestamp
 );
 
 CREATE TABLE IF NOT EXISTS dim_products (
@@ -117,7 +117,7 @@ from orders
 inner join dim_dates on dim_dates.id = orders.created_date_id
 group by dim_dates.year, dim_dates.quarter
 order by  dim_dates.year, dim_dates.quarter
-```
+```e
 
 ### 订单创建数，按每个季度每个产品类别查看
 
